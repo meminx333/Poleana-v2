@@ -1,0 +1,10 @@
+import Thing from './Thing.svelte';
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1em" >
+		<h2> Unkeyed</h2>
+		{#each things as thing}
+			<Thing current={thing.color}>
+			</Thing>
+	<h2>Keyed</h2>
+</div>
+
