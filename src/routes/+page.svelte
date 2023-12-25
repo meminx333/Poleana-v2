@@ -2,11 +2,22 @@
   import Board from "./Board.svelte";
   import  isSquareDisabled from "./Board.svelte";
   import getRandomColor from "./Board.svelte";
-  import { acLine, cNs } from "./utils.js";
+  import { acLine, bcLine, ccLine, dcLine, pCell, sCell, tCell, qCell, afCell, sfCell, tfCell, qfCell } from "./utils.js";
   
   let squares = Array(256).fill('');
   let next = "x";
-  $: coloLine = acLine(squares.map(square => square.color));
+  $:colaLine = acLine(squares);
+  $:colbLine = bcLine(squares);
+  $:colcLine = ccLine(squares);
+  $:coldLine = dcLine(squares);
+  $:asCell = pCell(squares);
+  $:bsCell = sCell(squares);
+  $:csCell = tCell(squares);
+  $:dsCell = qCell(squares);
+  $:aCell= afCell(squares);
+  $:bCell = sfCell(squares);
+  $:cCell = tfCell(squares);
+  $:dCell = qfCell(squares);
 </script>
 
 <div class="container">
@@ -15,11 +26,24 @@
       {#each squares as square, i}
 	  <button
 	  class="square"
+    class:calPlaying={colaLine?.includes(i)}
+    class:cblPlaying={colbLine?.includes(i)}
+    class:cclPlaying={colcLine?.includes(i)}
+    class:cdlPlaying={coldLine?.includes(i)}
+    class:callPlaying={asCell?.includes(i)}
+    class:cbllPlaying={bsCell?.includes(i)}
+    class:ccllPlaying={csCell?.includes(i)}
+    class:cdllPlaying={dsCell?.includes(i)}
+    class:allPlaying={aCell?.includes(i)}
+    class:bllPlaying={bCell?.includes(i)}
+    class:cllPlaying={cCell?.includes(i)}
+    class:dllPlaying={dCell?.includes(i)}
 	  disabled = {square}
 	  on:load={() => {
+
       }}
 	  >
-          {square}
+          { square } 
         </button>
       {/each}
     </svelte:fragment>
@@ -63,7 +87,56 @@
     height: 100%;
   }
 
-  .container:has(.starting) .square:not(.starting) {
+  .calPlaying{
+    color: blue;
+    background-color: rgb(95, 95, 241);
+  }
+  .cblPlaying{
+    color: rgb(217, 255, 0);
+    background-color: rgb(234, 234, 103);
+  }
+  .cclPlaying{
+    color: rgb(255, 0, 0);
+    background-color: rgb(240, 97, 97);
+  }
+  .cdlPlaying{
+    color: rgb(0, 255, 30);
+    background-color: rgb(83, 234, 83);
+  }
+  .callPlaying{
+    color: rgb(233, 233, 240);
+    background-color: rgb(233, 233, 240);
+  }
+  .cbllPlaying{
+    color: rgb(233, 233, 240);
+    background-color: rgb(233, 233, 240);
+  }
+  .ccllPlaying{
+    color: rgb(233, 233, 240);
+    background-color: rgb(233, 233, 240);
+  }
+  .cdllPlaying{
+    color: rgb(233, 233, 240);
+    background-color: rgb(233, 233, 240);
+  }
+  .allPlaying{
+    color: blue;
+    background-color: blue;
+  }
+  .bllPlaying{
+    color: rgb(217, 255, 0);
+    background-color: yellow;
+  }
+  .cllPlaying{
+    color: rgb(255, 0, 0);
+    background-color: red;
+  }
+  .dllPlaying{
+    color: rgb(0, 255, 30);
+    background-color: green;
+  }
+
+  .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) {
     color: #7535be;
   }
 </style>
