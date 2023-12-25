@@ -6,6 +6,7 @@
     const response = await fetch("/roll");
     diceResults = await response.json();
   }
+
   export let size;
   export let m = { x: 0, y: 0 };
 </script>

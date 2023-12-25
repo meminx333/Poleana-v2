@@ -1,17 +1,24 @@
 <script>
   import Board from "./Board.svelte";
-  import { getColorLine, lineas } from "./utils.js";
+  import  isSquareDisabled from "./Board.svelte";
+  import getRandomColor from "./Board.svelte";
+  import { acLine, cNs } from "./utils.js";
   
-  let squares = Array(256).fill("");
+  let squares = Array(256).fill('');
   let next = "x";
-  $: colorLine = getColorLine(squares);
+  $: coloLine = acLine(squares.map(square => square.color));
 </script>
 
 <div class="container">
   <Board size={16}>
     <svelte:fragment slot="game">
       {#each squares as square, i}
-        <button class="square" disabled={square}>
+	  <button
+	  class="square"
+	  disabled = {square}
+	  on:load={() => {
+      }}
+	  >
           {square}
         </button>
       {/each}
@@ -45,7 +52,7 @@
   .square:disabled {
     background: rgb(235, 183, 183);
     border-radius: 0;
-    color: #222;
+    color: #6c3636;
     opacity: 1;
     font-size: 1em;
     padding: 10%;

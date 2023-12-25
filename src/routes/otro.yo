@@ -8,3 +8,14 @@ import Thing from './Thing.svelte';
 	<h2>Keyed</h2>
 </div>
 
+  export function getRandomColor() {
+		const colors = ['#FF5733', '#33FF57', '#5733FF', '#FFFF33', '#33FFFF', '#FF33FF', '#FF5733', '#33FF57', '#5733FF'];
+		return colors[Math.floor(Math.random() * colors.length)];
+	}
+  export function isSquareDisabled(index) 
+		
+		// Puedes personalizar esta lógica según tus necesidades
+		return index === 0; // Desactivar cuadrados pares
+
+			    color: getRandomColor(),
+		disabled: isSquareDisabled(i)
