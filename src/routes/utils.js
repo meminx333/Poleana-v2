@@ -1,5 +1,3 @@
-import { COLOR } from "$env/static/private";
-
 export const lineas = [ [22, 23, 24, 25] ];
 export const linebs = [ [97, 113, 129, 145] ];
 export const linecs = [ [214, 215, 216, 217] ];
@@ -33,7 +31,7 @@ export function acLine(squares) {
           console.log(bline)
           return {
             props: {
-              color: 970303
+              color: 66
           }
         };
         }
@@ -44,9 +42,10 @@ export function acLine(squares) {
           console.log(clines)
           return {
             props: {
-              color: 970303
+              color: 56              
           }
         };
+
         }
       }
       for (const dlines of lineds) {
@@ -55,9 +54,9 @@ export function acLine(squares) {
           console.log(dlines);
           return {
             props: {
-              color: 970303
-          }
-        };
+              color: 14
         }
+        };
       }
+    }
 }
