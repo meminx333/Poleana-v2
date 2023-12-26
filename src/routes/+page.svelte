@@ -1,7 +1,5 @@
 <script>
   import Board from "./Board.svelte";
-  import  isSquareDisabled from "./Board.svelte";
-  import getRandomColor from "./Board.svelte";
   import { acLine, bcLine, ccLine, dcLine, pCell, sCell, tCell, qCell, afCell, sfCell, tfCell, qfCell } from "./utils.js";
   
   let squares = Array(256).fill('');
