@@ -1,6 +1,6 @@
 export function pannable(node) {
-	let x;
-	let y;
+	let x=0;
+	let y=0;
 
 	function handleMousedown(event) {
 		x = event.clientX;

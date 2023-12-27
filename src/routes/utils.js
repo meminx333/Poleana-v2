@@ -30,6 +30,22 @@ const qPlays = [
   ],
 ];
 const qfPlays = [[111, 159, 204, 255]];
+const unoNums = [[8,17,26,30,81,112,143,174,225,229,238,247]];
+const dosNums = [[7,18,42,46,82,127,128,173,209,213,237,248]];
+const treNums= [[6,29,33,41,98,111,144,157,214,222,226,249]];
+const cuaNums= [[5,34,45,95,160,210,221, 250]];
+const cujNums=[[39,40,114,125,130,141,215,216]];
+const cinNums=[[4,38,44,79,109,146,176,205,211,217,251]];
+const seiNums =[[3,37,44,50,63,93,162,192,205,218,220,252]];
+const sieNums =[[2,21,47,51,60,94,161,195,204,208,234,253]];
+const ochNums =[[1,31,224,254]];
+const nueNums =[[0,15,240,255]];
+const dieNums=[[14,16,239,241]];
+const oncNums=[[13,32,223,242]];
+const docNums=[[12,48,207,243]];
+const trcNums=[[11,64,191,244]];
+const catNums=[[10,80,175,245]];
+const cerNums=[[9,96,156,246]];
 
 export function acLine(squares) {
   for (const aline of lineas) {
@@ -383,5 +399,107 @@ export function qfCell(squares) {
     )
       console.log(qfPlay);
     return qfPlay;
+  }
+}
+export function unNum(squares) {
+  for (const unoNum of unoNums) {
+    const [
+      a1,
+      a2,
+      a3,
+      a4,
+      a5,
+      a6,
+      a7,
+      a8,
+      a9,
+      a10,
+      a11,
+      a12
+    ] = unoNum;
+    if (
+      squares[8] === unoNum[a1] &&
+      squares[17] === unoNum[a2] &&
+      squares[26] === unoNum[a3] &&
+      squares[30] === unoNum[a4] &&
+      squares[81] === unoNum[a5] &&
+      squares[112] === unoNum[a6] &&
+      squares[143] === unoNum[a7] &&
+      squares[174] === unoNum[a8] &&
+      squares[225] === unoNum[a9] &&
+      squares[229] === unoNum[a10] &&
+      squares[238] === unoNum[a11] &&
+      squares[247] === unoNum[a12] 
+    )
+      console.log(unoNum);
+    return unoNum;
+  }
+}
+export function trNum(squares) {
+  for (const treNum of treNums) {
+    const [
+      a1,
+      a2,
+      a3,
+      a4,
+      a5,
+      a6,
+      a7,
+      a8,
+      a9,
+      a10,
+      a11,
+      a12
+    ] = treNum;
+    if (
+      squares[6] === treNum[a1] &&
+      squares[29] === treNum[a2] &&
+      squares[33] === treNum[a3] &&
+      squares[41] === treNum[a4] &&
+      squares[82] === treNum[a5] &&
+      squares[127] === treNum[a6] &&
+      squares[128] === treNum[a7] &&
+      squares[173] === treNum[a8] &&
+      squares[209] === treNum[a9] &&
+      squares[213] === treNum[a10] &&
+      squares[237] === treNum[a11] &&
+      squares[248] === treNum[a12] 
+    )
+      console.log(treNum);
+    return treNum;
+  }
+}
+export function doNum(squares) {
+  for (const dosNum of dosNums) {
+    const [
+      a1,
+      a2,
+      a3,
+      a4,
+      a5,
+      a6,
+      a7,
+      a8,
+      a9,
+      a10,
+      a11,
+      a12
+    ] = dosNum;
+    if (
+      squares[7] === dosNum[a1] &&
+      squares[18] === dosNum[a2] &&
+      squares[42] === dosNum[a3] &&
+      squares[46] === dosNum[a4] &&
+      squares[82] === dosNum[a5] &&
+      squares[127] === dosNum[a6] &&
+      squares[128] === dosNum[a7] &&
+      squares[173] === dosNum[a8] &&
+      squares[209] === dosNum[a9] &&
+      squares[213] === dosNum[a10] &&
+      squares[237] === dosNum[a11] &&
+      squares[248] === dosNum[a12] 
+    )
+      console.log(dosNum);
+    return dosNum;
   }
 }
