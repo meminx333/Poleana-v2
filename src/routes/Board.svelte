@@ -1,18 +1,16 @@
 <script>
-  /** @type {{numbers: number, number1: number}} */
+ /** @type {{numbers: number, number1: number}} */
   let diceResults;
-
+  export let size;
+  export let m = { x: 0, y: 0 };
   async function rollDice() {
     const response = await fetch("/roll");
     diceResults = await response.json();
-  }
-
-  export let size;
-  export let m = { x: 0, y: 0 };
+  } 
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div on:mousemove={(e) => (m = { x: e.clientX, y: e.clientY })}>
+<div on:mousemove={(e) => (m = { x: e.clientX, y: e.clientY })} > 
   <div class="board" style="--size: {size}">
     <slot name="game" />
   </div>
@@ -33,7 +31,6 @@
         {/if}</td>
     </tr>
 </div>
-
 
 <style>
   .board {
