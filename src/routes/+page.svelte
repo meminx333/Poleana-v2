@@ -3,7 +3,7 @@
   import { acLine, bcLine, ccLine, dcLine, pCell, sCell, tCell, qCell, afCell, sfCell, tfCell, qfCell, unNum, doNum, trNum,cuNum,cjNum,ciNum,seNum,siNum,ocNum,nuNum,diNum,onNum,dcNum,teNum,caNum,ceNum } from "./utils.js";
   
   let squares = Array(256).fill('');
-  let next = "x";
+  let next;
   $:colaLine = acLine(squares);
   $:colbLine = bcLine(squares);
   $:colcLine = ccLine(squares);
@@ -68,12 +68,13 @@
     class:dcPlaying={odNum?.includes(i)}
     class:tePlaying={etNum?.includes(i)}
     class:caPlaying={qNum?.includes(i)}
-    class:cePlaying={crNum?.includes(i)}
+    class:cePlaying={crNum?.includes(i)} 
+    
 
 	  disabled = {square}
 	  on:load={() => {
-
-      }}
+      
+      }} 
 	  >
           { square } 
         </button>
@@ -81,8 +82,7 @@
     </svelte:fragment>
 
     <div slot="controls">
-      <button
-        on:click={() => {
+      <button on:click={() => {
           squares = Array(256).fill("");
           next = "x";
         }}
@@ -117,61 +117,116 @@
   div {
     width: 100%;
     height: 100%;
+    text-emphasis-color: black;
   }
 
   .calPlaying{
-    color: blue;
     background-color: rgb(95, 95, 241);
   }
+
   .cblPlaying{
-    color: rgb(217, 255, 0);
     background-color: rgb(234, 234, 103);
   }
+
   .cclPlaying{
-    color: rgb(255, 0, 0);
     background-color: rgb(240, 97, 97);
   }
+
   .cdlPlaying{
-    color: rgb(0, 255, 30);
     background-color: rgb(83, 234, 83);
   }
+
   .callPlaying{
-    color: rgb(233, 233, 240);
     background-color: rgb(233, 233, 240);
   }
+
   .cbllPlaying{
-    color: rgb(233, 233, 240);
     background-color: rgb(233, 233, 240);
-  }
-  .ccllPlaying{
-    color: rgb(233, 233, 240);
-    background-color: rgb(233, 233, 240);
-  }
-  .cdllPlaying{
-    color: rgb(233, 233, 240);
-    background-color: rgb(233, 233, 240);
-  }
-  .allPlaying{
-    color: blue;
-    background-color: blue;
-  }
-  .bllPlaying{
-    color: rgb(217, 255, 0);
-    background-color: yellow;
-  }
-  .cllPlaying{
-    color: rgb(255, 0, 0);
-    background-color: red;
-  }
-  .dllPlaying{
-    color: rgb(0, 255, 30);
-    background-color: green;
-  }
-  .uPlaying{
-    content: '{#if uPlaying}1{/if}';
   }
   
-  .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying, .uPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying, u.uPlaying) {
+  .ccllPlaying{
+    background-color: rgb(233, 233, 240);
+  }
+
+  .cdllPlaying{
+    background-color: rgb(233, 233, 240);
+  }
+
+  .allPlaying{
+    background-color: blue;
+  }
+
+  .bllPlaying{
+    background-color: yellow;
+  }
+
+  .cllPlaying{
+    background-color: red;
+  }
+
+  .dllPlaying{
+    background-color: green;
+  }
+
+  .uPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\1.png");
+    background-size: contain;
+  }
+  .dPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\2.png");
+    background-size: contain;
+  }
+  .tPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\3.png");
+    background-size: contain;
+  }
+  .cPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\4.png");
+    background-size: contain;
+  }
+  .ciPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\5.png");
+    background-size: contain;
+  }
+  .sePlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\6.png");
+    background-size: contain;
+  }
+  .sPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\7.png");
+    background-size: contain;
+  }
+  .oPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\8.png");
+    background-size: contain;
+  }
+  .nPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\9.png");
+    background-size: contain;
+  }
+  .diPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\10.png");
+    background-size: contain;
+  }
+  .onPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\11.png");
+    background-size: contain;
+  }
+  .dcPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\12.png");
+    background-size: contain;
+  }
+  .tePlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\13.png");
+    background-size: contain;
+  }
+  .caPlaying{
+    background-image: url("C:\Users\memo_\cana\src\routes\numeros\14.png");
+    background-size: contain;
+  }
+
+  .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying, .uPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) {
     color: #7535be;
+
   }
 </style>

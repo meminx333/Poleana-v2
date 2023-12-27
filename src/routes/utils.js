@@ -662,6 +662,6 @@ export function ceNum(squares) {
       squares[246] === cerNum[d]
     )
       console.log(cerNum);
-    return cerNum;
+    return cerNum; 
   }
 }

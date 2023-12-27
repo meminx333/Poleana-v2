@@ -1,5 +1,4 @@
 <script>
-  import App from "./App.svelte";
   /** @type {{numbers: number, number1: number}} */
   let diceResults;
 
@@ -35,7 +34,6 @@
     </tr>
 </div>
 
-<App />
 
 <style>
   .board {
