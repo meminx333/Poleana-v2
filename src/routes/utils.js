@@ -30,22 +30,22 @@ const qPlays = [
   ],
 ];
 const qfPlays = [[111, 159, 204, 255]];
-const unoNums = [[8,17,26,30,81,112,143,174,225,229,238,247]];
-const dosNums = [[7,18,42,46,82,127,128,173,209,213,237,248]];
-const treNums= [[6,29,33,41,98,111,144,157,214,222,226,249]];
-const cuaNums= [[5,34,45,95,160,210,221, 250]];
-const cujNums=[[39,40,114,125,130,141,215,216]];
-const cinNums=[[4,38,44,79,109,146,176,205,211,217,251]];
-const seiNums =[[3,37,44,50,63,93,162,192,205,218,220,252]];
-const sieNums =[[2,21,47,51,60,94,161,195,204,208,234,253]];
-const ochNums =[[1,31,224,254]];
-const nueNums =[[0,15,240,255]];
-const dieNums=[[14,16,239,241]];
-const oncNums=[[13,32,223,242]];
-const docNums=[[12,48,207,243]];
-const trcNums=[[11,64,191,244]];
-const catNums=[[10,80,175,245]];
-const cerNums=[[9,96,156,246]];
+const unoNums = [[8, 17, 26, 30, 81, 112, 143, 174, 225, 229, 238, 247]];
+const dosNums = [[7, 18, 42, 46, 82, 127, 128, 173, 209, 213, 237, 248]];
+const treNums = [[6, 29, 33, 41, 98, 111, 144, 157, 214, 222, 226, 249]];
+const cuaNums = [[5, 34, 45, 95, 160, 210, 221, 250]];
+const cujNums = [[39, 40, 114, 125, 130, 141, 215, 216]];
+const cinNums = [[4, 35, 38, 61, 79, 109, 146, 176, 194, 217, 220, 251]];
+const seiNums = [[3, 37, 44, 50, 63, 93, 162, 192, 205, 211, 218, 252]];
+const sieNums = [[2, 21, 47, 51, 60, 94, 161, 195, 204, 208, 234, 253]];
+const ochNums = [[1, 31, 224, 254]];
+const nueNums = [[0, 15, 240, 255]];
+const dieNums = [[14, 16, 239, 241]];
+const oncNums = [[13, 32, 223, 242]];
+const docNums = [[12, 48, 207, 243]];
+const trcNums = [[11, 64, 191, 244]];
+const catNums = [[10, 80, 175, 245]];
+const cerNums = [[9, 96, 156, 246]];
 
 export function acLine(squares) {
   for (const aline of lineas) {
@@ -403,20 +403,7 @@ export function qfCell(squares) {
 }
 export function unNum(squares) {
   for (const unoNum of unoNums) {
-    const [
-      a1,
-      a2,
-      a3,
-      a4,
-      a5,
-      a6,
-      a7,
-      a8,
-      a9,
-      a10,
-      a11,
-      a12
-    ] = unoNum;
+    const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = unoNum;
     if (
       squares[8] === unoNum[a1] &&
       squares[17] === unoNum[a2] &&
@@ -429,62 +416,15 @@ export function unNum(squares) {
       squares[225] === unoNum[a9] &&
       squares[229] === unoNum[a10] &&
       squares[238] === unoNum[a11] &&
-      squares[247] === unoNum[a12] 
+      squares[247] === unoNum[a12]
     )
       console.log(unoNum);
     return unoNum;
   }
 }
-export function trNum(squares) {
-  for (const treNum of treNums) {
-    const [
-      a1,
-      a2,
-      a3,
-      a4,
-      a5,
-      a6,
-      a7,
-      a8,
-      a9,
-      a10,
-      a11,
-      a12
-    ] = treNum;
-    if (
-      squares[6] === treNum[a1] &&
-      squares[29] === treNum[a2] &&
-      squares[33] === treNum[a3] &&
-      squares[41] === treNum[a4] &&
-      squares[82] === treNum[a5] &&
-      squares[127] === treNum[a6] &&
-      squares[128] === treNum[a7] &&
-      squares[173] === treNum[a8] &&
-      squares[209] === treNum[a9] &&
-      squares[213] === treNum[a10] &&
-      squares[237] === treNum[a11] &&
-      squares[248] === treNum[a12] 
-    )
-      console.log(treNum);
-    return treNum;
-  }
-}
 export function doNum(squares) {
   for (const dosNum of dosNums) {
-    const [
-      a1,
-      a2,
-      a3,
-      a4,
-      a5,
-      a6,
-      a7,
-      a8,
-      a9,
-      a10,
-      a11,
-      a12
-    ] = dosNum;
+    const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = dosNum;
     if (
       squares[7] === dosNum[a1] &&
       squares[18] === dosNum[a2] &&
@@ -497,9 +437,231 @@ export function doNum(squares) {
       squares[209] === dosNum[a9] &&
       squares[213] === dosNum[a10] &&
       squares[237] === dosNum[a11] &&
-      squares[248] === dosNum[a12] 
+      squares[248] === dosNum[a12]
     )
       console.log(dosNum);
     return dosNum;
+  }
+}
+export function trNum(squares) {
+  for (const treNum of treNums) {
+    const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = treNum;
+    if (
+      squares[6] === treNum[a1] &&
+      squares[29] === treNum[a2] &&
+      squares[33] === treNum[a3] &&
+      squares[41] === treNum[a4] &&
+      squares[98] === treNum[a5] &&
+      squares[111] === treNum[a6] &&
+      squares[144] === treNum[a7] &&
+      squares[157] === treNum[a8] &&
+      squares[214] === treNum[a9] &&
+      squares[222] === treNum[a10] &&
+      squares[226] === treNum[a11] &&
+      squares[249] === treNum[a12]
+    )
+      console.log(treNum);
+    return treNum;
+  }
+}
+export function cuNum(squares) {
+  for (const cuaNum of cuaNums) {
+    const [a1, a2, a3, a4, a5, a6, a7, a8] = cuaNum;
+    if (
+      squares[5] === cuaNum[a1] &&
+      squares[34] === cuaNum[a2] &&
+      squares[45] === cuaNum[a3] &&
+      squares[95] === cuaNum[a4] &&
+      squares[160] === cuaNum[a5] &&
+      squares[210] === cuaNum[a6] &&
+      squares[221] === cuaNum[a7] &&
+      squares[250] === cuaNum[a8]
+    )
+      console.log(cuaNum);
+    return cuaNum;
+  }
+}
+export function cjNum(squares) {
+  for (const cujNum of cujNums) {
+    const [a1, a2, a3, a4, a5, a6, a7, a8] = cujNum;
+    if (
+      squares[39] === cujNum[a1] &&
+      squares[40] === cujNum[a2] &&
+      squares[114] === cujNum[a3] &&
+      squares[125] === cujNum[a4] &&
+      squares[130] === cujNum[a5] &&
+      squares[141] === cujNum[a6] &&
+      squares[215] === cujNum[a7] &&
+      squares[216] === cujNum[a8]
+    )
+      console.log(cujNum);
+    return cujNum;
+  }
+}
+export function ciNum(squares) {
+  for (const cinNum of cinNums) {
+    const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = cinNum;
+    if (
+      squares[4] === cinNum[a1] &&
+      squares[35] === cinNum[a2] &&
+      squares[38] === cinNum[a3] &&
+      squares[61] === cinNum[a4] &&
+      squares[79] === cinNum[a5] &&
+      squares[109] === cinNum[a6] &&
+      squares[146] === cinNum[a7] &&
+      squares[176] === cinNum[a8] &&
+      squares[194] === cinNum[a9] &&
+      squares[217] === cinNum[a10] &&
+      squares[220] === cinNum[a11] &&
+      squares[251] === cinNum[a12]
+    )
+      console.log(cinNum);
+    return cinNum;
+  }
+}
+export function seNum(squares) {
+  for (const seiNum of seiNums) {
+    const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = seiNum;
+    if (
+      squares[3] === seiNum[a1] &&
+      squares[37] === seiNum[a2] &&
+      squares[44] === seiNum[a3] &&
+      squares[50] === seiNum[a4] &&
+      squares[63] === seiNum[a5] &&
+      squares[93] === seiNum[a6] &&
+      squares[162] === seiNum[a7] &&
+      squares[192] === seiNum[a8] &&
+      squares[205] === seiNum[a9] &&
+      squares[211] === seiNum[a10] &&
+      squares[218] === seiNum[a11] &&
+      squares[252] === seiNum[a12]
+    )
+      console.log(seiNum);
+    return seiNum;
+  }
+}
+export function siNum(squares) {
+  for (const sieNum of sieNums) {
+    const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = sieNum;
+    if (
+      squares[2] === sieNum[a1] &&
+      squares[21] === sieNum[a2] &&
+      squares[47] === sieNum[a3] &&
+      squares[51] === sieNum[a4] &&
+      squares[60] === sieNum[a5] &&
+      squares[94] === sieNum[a6] &&
+      squares[161] === sieNum[a7] &&
+      squares[195] === sieNum[a8] &&
+      squares[204] === sieNum[a9] &&
+      squares[208] === sieNum[a10] &&
+      squares[234] === sieNum[a11] &&
+      squares[253] === sieNum[a12]
+    )
+      console.log(sieNum);
+    return sieNum;
+  }
+}
+export function ocNum(squares) {
+  for (const ochNum of ochNums) {
+    const [a, b, c, d] = ochNum;
+    if (
+      squares[1] === ochNum[a] &&
+      squares[31] === ochNum[b] &&
+      squares[224] === ochNum[c] &&
+      squares[254] === ochNum[d]
+    )
+      console.log(ochNum);
+    return ochNum;
+  }
+}
+export function nuNum(squares) {
+  for (const nueNum of nueNums) {
+    const [a, b, c, d] = nueNum;
+    if (
+      squares[0] === nueNum[a] &&
+      squares[15] === nueNum[b] &&
+      squares[240] === nueNum[c] &&
+      squares[255] === nueNum[d]
+    )
+      console.log(nueNum);
+    return nueNum;
+  }
+}
+export function diNum(squares) {
+  for (const dieNum of dieNums) {
+    const [a, b, c, d] = dieNum;
+    if (
+      squares[14] === dieNum[a] &&
+      squares[16] === dieNum[b] &&
+      squares[239] === dieNum[c] &&
+      squares[241] === dieNum[d]
+    )
+      console.log(dieNum);
+    return dieNum;
+  }
+}
+export function onNum(squares) {
+  for (const oncNum of oncNums) {
+    const [a, b, c, d] = oncNum;
+    if (
+      squares[13] === oncNum[a] &&
+      squares[32] === oncNum[b] &&
+      squares[223] === oncNum[c] &&
+      squares[242] === oncNum[d]
+    )
+      console.log(oncNum);
+    return oncNum;
+  }
+}
+export function dcNum(squares) {
+  for (const docNum of docNums) {
+    const [a, b, c, d] = docNum;
+    if (
+      squares[12] === docNum[a] &&
+      squares[48] === docNum[b] &&
+      squares[207] === docNum[c] &&
+      squares[243] === docNum[d]
+    )
+      console.log(docNum);
+    return docNum;
+  }
+}
+export function teNum(squares) {
+  for (const trcNum of trcNums) {
+    const [a, b, c, d] = trcNum;
+    if (
+      squares[11] === trcNum[a] &&
+      squares[64] === trcNum[b] &&
+      squares[191] === trcNum[c] &&
+      squares[244] === trcNum[d]
+    )
+      console.log(trcNum);
+    return trcNum;
+  }
+}
+export function caNum(squares) {
+  for (const catNum of catNums) {
+    const [a, b, c, d] = catNum;
+    if (
+      squares[10] === catNum[a] &&
+      squares[80] === catNum[b] &&
+      squares[175] === catNum[c] &&
+      squares[245] === catNum[d]
+    )
+      console.log(catNum);
+    return catNum;
+  }
+}
+export function ceNum(squares) {
+  for (const cerNum of cerNums) {
+    const [a, b, c, d] = cerNum;
+    if (
+      squares[9] === cerNum[a] &&
+      squares[96] === cerNum[b] &&
+      squares[156] === cerNum[c] &&
+      squares[246] === cerNum[d]
+    )
+      console.log(cerNum);
+    return cerNum;
   }
 }

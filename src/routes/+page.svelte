@@ -1,6 +1,6 @@
 <script>
   import Board from "./Board.svelte";
-  import { acLine, bcLine, ccLine, dcLine, pCell, sCell, tCell, qCell, afCell, sfCell, tfCell, qfCell } from "./utils.js";
+  import { acLine, bcLine, ccLine, dcLine, pCell, sCell, tCell, qCell, afCell, sfCell, tfCell, qfCell, unNum, doNum, trNum,cuNum,cjNum,ciNum,seNum,siNum,ocNum,nuNum,diNum,onNum,dcNum,teNum,caNum,ceNum } from "./utils.js";
   
   let squares = Array(256).fill('');
   let next = "x";
@@ -16,6 +16,23 @@
   $:bCell = sfCell(squares);
   $:cCell = tfCell(squares);
   $:dCell = qfCell(squares);
+  $:uNum = unNum(squares);
+  $:dNum = doNum(squares);
+  $:tNum = trNum(squares);
+  $:cNum = cuNum(squares);
+  $:jNum = cjNum(squares);
+  $:iNum = ciNum(squares);
+  $:eNum = seNum(squares);
+  $:sNum = siNum(squares);
+  $:oNum = ocNum(squares);
+  $:nNum = nuNum(squares);
+  $:idNum = diNum(squares);
+  $:noNum = onNum(squares);
+  $:odNum = dcNum(squares);
+  $:etNum = teNum(squares);
+  $:qNum = caNum(squares);
+  $:crNum = ceNum(squares);
+
 </script>
 
 <div class="container">
@@ -36,6 +53,23 @@
     class:bllPlaying={bCell?.includes(i)}
     class:cllPlaying={cCell?.includes(i)}
     class:dllPlaying={dCell?.includes(i)}
+    class:uPlaying={uNum?.includes(i)}
+    class:dPlaying={dNum?.includes(i)}
+    class:tPlaying={tNum?.includes(i)}
+    class:cPlaying={cNum?.includes(i)}
+    class:jPlaying={jNum?.includes(i)}
+    class:ciPlaying={iNum?.includes(i)}
+    class:sePlaying={eNum?.includes(i)}
+    class:sPlaying={sNum?.includes(i)}
+    class:oPlaying={oNum?.includes(i)}
+    class:nPlaying={nNum?.includes(i)}
+    class:diPlaying={idNum?.includes(i)}
+    class:onPlaying={noNum?.includes(i)}
+    class:dcPlaying={odNum?.includes(i)}
+    class:tePlaying={etNum?.includes(i)}
+    class:caPlaying={qNum?.includes(i)}
+    class:cePlaying={crNum?.includes(i)}
+
 	  disabled = {square}
 	  on:load={() => {
 
@@ -133,8 +167,11 @@
     color: rgb(0, 255, 30);
     background-color: green;
   }
-
-  .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) {
+  .uPlaying{
+    content: '{#if uPlaying}1{/if}';
+  }
+  
+  .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying, .uPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying, u.uPlaying) {
     color: #7535be;
   }
 </style>
