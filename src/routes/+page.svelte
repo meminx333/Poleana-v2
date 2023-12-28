@@ -36,10 +36,13 @@
 </script>
 
 <div class="container">
+
   <Board size={16}>
+    
     <svelte:fragment slot="game">
+    
       {#each squares as square, i}
-	  <button
+      <button
 	  class="square"
     class:calPlaying={colaLine?.includes(i)}
     class:cblPlaying={colbLine?.includes(i)}
@@ -72,26 +75,36 @@
     
 
 	  disabled = {square}
-	  on:load={() => {
-      
+    
+	  on:click={() => {
+      console.log()
       }} 
 	  >
+    
           { square } 
+           
         </button>
+        
       {/each}
+      
     </svelte:fragment>
 
     <div slot="controls">
+       
       <button on:click={() => {
           squares = Array(256).fill("");
           next = "x";
         }}
+        
       >
-        Reset
+      
+      Reset
       </button>
+
     </div>
+    
   </Board>
-  console.log({squares})
+    console.log({squares})
 </div>
 
 <style>
@@ -103,7 +116,7 @@
     height: 100%;
     margin: 0 auto;
   }
-
+   
   .square,
   .square:disabled {
     background: rgb(235, 183, 183);

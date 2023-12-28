@@ -1,4 +1,5 @@
 <script>
+  import Circle from "./Circle.svelte";
  /** @type {{numbers: number, number1: number}} */
   let diceResults;
   export let size;
@@ -11,9 +12,13 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div on:mousemove={(e) => (m = { x: e.clientX, y: e.clientY })} > 
+  
   <div class="board" style="--size: {size}">
+    
     <slot name="game" />
+ 
   </div>
+  
   <table>
     <tr>
       <th>Position</th>
@@ -42,9 +47,9 @@
     aspect-ratio: 1;
     background: rgb(191, 65, 65);
     gap: 1px;
-    padding: 0.2em;
+    padding: 0.3em;
     border-radius: 0.5em;
-    filter: drop-shadow(0.1em 0.1em 0.1em rgba(232, 209, 209, 0.3));
+    filter: drop-shadow(0.1em 00.1em 0.1em rgba(232, 209, 209, 0.3));
   }
   div {
     width: 100%;
