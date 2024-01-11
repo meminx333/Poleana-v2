@@ -1,4 +1,4 @@
-/* eslint-disable valid-jsdoc */
+/* eslint-disable require-jsdoc */
 const lineas = [[22, 23, 24, 25]];
 const linebs = [[97, 113, 129, 145]];
 const linecs = [[230, 231, 232, 233]];
@@ -47,9 +47,6 @@ const trcNums = [[11, 64, 191, 244]];
 const catNums = [[10, 80, 175, 245]];
 const cerNums = [[9, 96, 156, 246]];
 
-/**
- * @param {any[]} squares
- */
 export function acLine(squares) {
   for (const aline of lineas) {
     const [a, b, c, d] = aline;
@@ -59,15 +56,12 @@ export function acLine(squares) {
       squares[24] === aline[c] &&
       squares[25] === aline[d]
     ) {
-      console.log(aline);
     }
+    console.log(aline);
     return aline;
   }
 }
 
-/**
- * @param {any[]} squares
- */
 export function bcLine(squares) {
   for (const bline of linebs) {
     const [a, b, c, d] = bline;
@@ -77,14 +71,11 @@ export function bcLine(squares) {
       squares[129] === bline[c] &&
       squares[145] === bline[d]
     ) {
-      console.log(bline);
     }
+    console.log(bline);
     return bline;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function ccLine(squares) {
   for (const clines of linecs) {
     const [a, b, c, d] = clines;
@@ -94,14 +85,11 @@ export function ccLine(squares) {
       squares[232] === clines[c] &&
       squares[233] === clines[d]
     ) {
-      console.log(clines);
     }
+    console.log(clines);
     return clines;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function dcLine(squares) {
   for (const dlines of lineds) {
     const [a, b, c, d] = dlines;
@@ -111,14 +99,11 @@ export function dcLine(squares) {
       squares[142] === dlines[c] &&
       squares[158] === dlines[d]
     ) {
-      console.log(dlines);
     }
+    console.log(dlines);
     return dlines;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function pCell(squares) {
   for (const fPlay of fPlays) {
     const [
@@ -177,14 +162,11 @@ export function pCell(squares) {
       squares[161] === fPlay[a25] &&
       squares[162] === fPlay[a26]
     ) {
-      console.log(fPlay);
     }
+    console.log(fPlay);
     return fPlay;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function qCell(squares) {
   for (const qPlay of qPlays) {
     const [
@@ -243,14 +225,11 @@ export function qCell(squares) {
       squares[237] === qPlay[a25] &&
       squares[238] === qPlay[a26]
     ) {
-      console.log(qPlay);
     }
+    console.log(qPlay);
     return qPlay;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function sCell(squares) {
   for (const sPlay of sPlays) {
     const [
@@ -309,14 +288,11 @@ export function sCell(squares) {
       squares[244] === sPlay[a25] &&
       squares[245] === sPlay[a26]
     ) {
-      console.log(sPlay);
     }
+    console.log(sPlay);
     return sPlay;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function tCell(squares) {
   for (const tPlay of tPlays) {
     const [
@@ -375,14 +351,11 @@ export function tCell(squares) {
       squares[253] === tPlay[a25] &&
       squares[254] === tPlay[a26]
     ) {
-      console.log(tPlay);
     }
+    console.log(tPlay);
     return tPlay;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function afCell(squares) {
   for (const cfPlay of cfPlays) {
     const [a, b, c, d] = cfPlay;
@@ -392,14 +365,11 @@ export function afCell(squares) {
       squares[15] === cfPlay[c] &&
       squares[60] === cfPlay[d]
     ) {
-      console.log(cfPlay);
     }
+    console.log(cfPlay);
     return cfPlay;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function sfCell(squares) {
   for (const sfPlay of sfPlays) {
     const [a, b, c, d] = sfPlay;
@@ -409,14 +379,11 @@ export function sfCell(squares) {
       squares[96] === sfPlay[c] &&
       squares[144] === sfPlay[d]
     ) {
-      console.log(sfPlay);
     }
+    console.log(sfPlay);
     return sfPlay;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function tfCell(squares) {
   for (const tfPlay of tfPlays) {
     const [a, b, c, d] = tfPlay;
@@ -426,14 +393,11 @@ export function tfCell(squares) {
       squares[246] === tfPlay[c] &&
       squares[249] === tfPlay[d]
     ) {
-      console.log(tfPlay);
     }
+    console.log(tfPlay);
     return tfPlay;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function qfCell(squares) {
   for (const qfPlay of qfPlays) {
     const [a, b, c, d] = qfPlay;
@@ -443,14 +407,12 @@ export function qfCell(squares) {
       squares[204] === qfPlay[c] &&
       squares[255] === qfPlay[d]
     ) {
-      console.log(qfPlay);
     }
+    console.log(qfPlay);
     return qfPlay;
   }
 }
-/**
- * @param {any[]} squares
- */
+
 export function unNum(squares) {
   for (const unoNum of unoNums) {
     const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = unoNum;
@@ -468,14 +430,11 @@ export function unNum(squares) {
       squares[238] === unoNum[a11] &&
       squares[247] === unoNum[a12]
     ) {
-      console.log(unoNum);
     }
+    console.log(unoNum);
     return unoNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function doNum(squares) {
   for (const dosNum of dosNums) {
     const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = dosNum;
@@ -493,14 +452,11 @@ export function doNum(squares) {
       squares[237] === dosNum[a11] &&
       squares[248] === dosNum[a12]
     ) {
-      console.log(dosNum);
     }
+    console.log(dosNum);
     return dosNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function trNum(squares) {
   for (const treNum of treNums) {
     const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = treNum;
@@ -518,14 +474,11 @@ export function trNum(squares) {
       squares[226] === treNum[a11] &&
       squares[249] === treNum[a12]
     ) {
-      console.log(treNum);
     }
+    console.log(treNum);
     return treNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function cuNum(squares) {
   for (const cuaNum of cuaNums) {
     const [a1, a2, a3, a4, a5, a6, a7, a8] = cuaNum;
@@ -539,14 +492,11 @@ export function cuNum(squares) {
       squares[221] === cuaNum[a7] &&
       squares[250] === cuaNum[a8]
     ) {
-      console.log(cuaNum);
     }
+    console.log(cuaNum);
     return cuaNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function cjNum(squares) {
   for (const cujNum of cujNums) {
     const [a1, a2, a3, a4, a5, a6, a7, a8] = cujNum;
@@ -560,14 +510,11 @@ export function cjNum(squares) {
       squares[215] === cujNum[a7] &&
       squares[216] === cujNum[a8]
     ) {
-      console.log(cujNum);
     }
+    console.log(cujNum);
     return cujNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function ciNum(squares) {
   for (const cinNum of cinNums) {
     const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = cinNum;
@@ -585,14 +532,11 @@ export function ciNum(squares) {
       squares[220] === cinNum[a11] &&
       squares[251] === cinNum[a12]
     ) {
-      console.log(cinNum);
     }
+    console.log(cinNum);
     return cinNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function seNum(squares) {
   for (const seiNum of seiNums) {
     const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = seiNum;
@@ -610,14 +554,11 @@ export function seNum(squares) {
       squares[218] === seiNum[a11] &&
       squares[252] === seiNum[a12]
     ) {
-      console.log(seiNum);
     }
+    console.log(seiNum);
     return seiNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function siNum(squares) {
   for (const sieNum of sieNums) {
     const [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = sieNum;
@@ -635,14 +576,11 @@ export function siNum(squares) {
       squares[234] === sieNum[a11] &&
       squares[253] === sieNum[a12]
     ) {
-      console.log(sieNum);
     }
+    console.log(sieNum);
     return sieNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function ocNum(squares) {
   for (const ochNum of ochNums) {
     const [a, b, c, d] = ochNum;
@@ -652,14 +590,11 @@ export function ocNum(squares) {
       squares[224] === ochNum[c] &&
       squares[254] === ochNum[d]
     ) {
-      console.log(ochNum);
     }
+    console.log(ochNum);
     return ochNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function nuNum(squares) {
   for (const nueNum of nueNums) {
     const [a, b, c, d] = nueNum;
@@ -669,14 +604,11 @@ export function nuNum(squares) {
       squares[240] === nueNum[c] &&
       squares[255] === nueNum[d]
     ) {
-      console.log(nueNum);
     }
+    console.log(nueNum);
     return nueNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function diNum(squares) {
   for (const dieNum of dieNums) {
     const [a, b, c, d] = dieNum;
@@ -686,14 +618,11 @@ export function diNum(squares) {
       squares[239] === dieNum[c] &&
       squares[241] === dieNum[d]
     ) {
-      console.log(dieNum);
     }
+    console.log(dieNum);
     return dieNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function onNum(squares) {
   for (const oncNum of oncNums) {
     const [a, b, c, d] = oncNum;
@@ -703,14 +632,11 @@ export function onNum(squares) {
       squares[223] === oncNum[c] &&
       squares[242] === oncNum[d]
     ) {
-      console.log(oncNum);
     }
+    console.log(oncNum);
     return oncNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function dcNum(squares) {
   for (const docNum of docNums) {
     const [a, b, c, d] = docNum;
@@ -720,14 +646,11 @@ export function dcNum(squares) {
       squares[207] === docNum[c] &&
       squares[243] === docNum[d]
     ) {
-      console.log(docNum);
     }
+    console.log(docNum);
     return docNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function teNum(squares) {
   for (const trcNum of trcNums) {
     const [a, b, c, d] = trcNum;
@@ -737,14 +660,11 @@ export function teNum(squares) {
       squares[191] === trcNum[c] &&
       squares[244] === trcNum[d]
     ) {
-      console.log(trcNum);
     }
+    console.log(trcNum);
     return trcNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function caNum(squares) {
   for (const catNum of catNums) {
     const [a, b, c, d] = catNum;
@@ -754,14 +674,11 @@ export function caNum(squares) {
       squares[175] === catNum[c] &&
       squares[245] === catNum[d]
     ) {
-      console.log(catNum);
     }
+    console.log(catNum);
     return catNum;
   }
 }
-/**
- * @param {any[]} squares
- */
 export function ceNum(squares) {
   for (const cerNum of cerNums) {
     const [a, b, c, d] = cerNum;
@@ -771,8 +688,8 @@ export function ceNum(squares) {
       squares[156] === cerNum[c] &&
       squares[246] === cerNum[d]
     ) {
-      console.log(cerNum);
     }
+    console.log(cerNum);
     return cerNum;
   }
 }
