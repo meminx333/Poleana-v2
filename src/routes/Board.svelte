@@ -1,5 +1,5 @@
 <script>
-  import Circle from "./Circle.svelte";
+
  /** @type {{numbers: number, number1: number}} */
   let diceResults;
   export let size;
@@ -12,10 +12,10 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div on:mousemove={(e) => (m = { x: e.clientX, y: e.clientY })} > 
-  
+ 
   <div class="board" style="--size: {size}">
-    
-    <slot name="game" />
+
+    <slot name="game"  />
  
   </div>
   

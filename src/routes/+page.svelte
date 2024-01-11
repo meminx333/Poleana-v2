@@ -2,8 +2,7 @@
   import Board from "./Board.svelte";
   import { acLine, bcLine, ccLine, dcLine, pCell, sCell, tCell, qCell, afCell, sfCell, tfCell, qfCell, unNum, doNum, trNum,cuNum,cjNum,ciNum,seNum,siNum,ocNum,nuNum,diNum,onNum,dcNum,teNum,caNum,ceNum } from "./utils.js";
   
-  let squares = Array(256).fill('');
-  let next;
+  let squares = Array(256);
   $:colaLine = acLine(squares);
   $:colbLine = bcLine(squares);
   $:colcLine = ccLine(squares);
@@ -38,11 +37,9 @@
 <div class="container">
 
   <Board size={16}>
-    
-    <svelte:fragment slot="game">
-    
-      {#each squares as square, i}
-      <button
+    <svelte:fragment slot="game" >
+     {#each squares as square, i}
+    <button
 	  class="square"
     class:calPlaying={colaLine?.includes(i)}
     class:cblPlaying={colbLine?.includes(i)}
@@ -73,38 +70,31 @@
     class:caPlaying={qNum?.includes(i)}
     class:cePlaying={crNum?.includes(i)} 
     
-
-	  disabled = {square}
     
 	  on:click={() => {
-      console.log()
       }} 
-	  >
-    
-          { square } 
-           
-        </button>
-        
+    >
+   
+    </button>    
+   
       {/each}
       
     </svelte:fragment>
-
+   
     <div slot="controls">
-       
+    
       <button on:click={() => {
-          squares = Array(256).fill("");
-          next = "x";
+          squares = Array(256);
         }}
         
       >
       
       Reset
       </button>
-
+     
     </div>
-    
+  
   </Board>
-    console.log({squares})
 </div>
 
 <style>
@@ -117,8 +107,7 @@
     margin: 0 auto;
   }
    
-  .square,
-  .square:disabled {
+  .square{
     background: rgb(235, 183, 183);
     border-radius: 0;
     color: #6c3636;
@@ -135,6 +124,7 @@
 
   .calPlaying{
     background-color: rgb(95, 95, 241);
+
   }
 
   .cblPlaying{
@@ -183,47 +173,47 @@
 
   .uPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\1.png");
-    background-size: contain;
+    background-size: cover;
   }
   .dPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\2.png");
-    background-size: contain;
+    background-size: cover;
   }
   .tPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\3.png");
-    background-size: contain;
+    background-size: cover;
   }
   .cPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\4.png");
-    background-size: contain;
+    background-size: cover;
   }
   .ciPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\5.png");
-    background-size: contain;
+    background-size: cover;
   }
   .sePlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\6.png");
-    background-size: contain;
+    background-size: cover;
   }
   .sPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\7.png");
-    background-size: contain;
+    background-size: cover;
   }
   .oPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\8.png");
-    background-size: contain;
+    background-size: cover;
   }
   .nPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\9.png");
-    background-size: contain;
+    background-size: cover;
   }
   .diPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\10.png");
-    background-size: contain;
+    background-size: cover;
   }
   .onPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\11.png");
-    background-size: contain;
+    background-size: cover;
   }
   .dcPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\12.png");
@@ -231,11 +221,11 @@
   }
   .tePlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\13.png");
-    background-size: contain;
+    background-size: cover;
   }
   .caPlaying{
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\14.png");
-    background-size: contain;
+    background-size: cover;
   }
 
   .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying, .uPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) {
