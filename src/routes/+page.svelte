@@ -1,6 +1,6 @@
 <script>
   import Board from "./Board.svelte";
-  import { acLine, bcLine, ccLine, dcLine, pCell, sCell, tCell, qCell, afCell, sfCell, tfCell, qfCell, unNum, doNum, trNum,cuNum,cjNum,ciNum,seNum,siNum,ocNum,nuNum,diNum,onNum,dcNum,teNum,caNum,ceNum } from "./utils.js";
+  import { acLine, bcLine, ccLine, dcLine, pCell, qCell, sCell, tCell, afCell, sfCell, tfCell, qfCell, unNum, doNum, trNum,cuNum,cjNum,ciNum,seNum,siNum,ocNum,nuNum,diNum,onNum,dcNum,teNum,caNum,ceNum } from "./utils.js";
   
   let squares = Array(256);
   $:colaLine = acLine(squares);
@@ -8,9 +8,9 @@
   $:colcLine = ccLine(squares);
   $:coldLine = dcLine(squares);
   $:asCell = pCell(squares);
+  $:dsCell = qCell(squares);
   $:bsCell = sCell(squares);
   $:csCell = tCell(squares);
-  $:dsCell = qCell(squares);
   $:aCell= afCell(squares);
   $:bCell = sfCell(squares);
   $:cCell = tfCell(squares);
@@ -70,9 +70,6 @@
     class:caPlaying={qNum?.includes(i)}
     class:cePlaying={crNum?.includes(i)} 
     
-    
-	  on:click={() => {
-      }} 
     >
    
     </button>    
@@ -82,16 +79,7 @@
     </svelte:fragment>
    
     <div slot="controls">
-    
-      <button on:click={() => {
-          squares = Array(256);
-        }}
-        
-      >
-      
-      Reset
-      </button>
-     
+ 
     </div>
   
   </Board>
@@ -227,8 +215,11 @@
     background-image: url("C:\Users\memo_\cana\src\routes\numeros\14.png");
     background-size: cover;
   }
+  .cePlaying{
+    padding: 10%;
+  }
 
-  .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying, .uPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) {
+  .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) {
     color: #7535be;
 
   }

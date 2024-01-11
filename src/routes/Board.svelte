@@ -9,16 +9,15 @@
     diceResults = await response.json();
   } 
 </script>
-
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div on:mousemove={(e) => (m = { x: e.clientX, y: e.clientY })} > 
  
   <div class="board" style="--size: {size}">
+    
 
     <slot name="game"  />
- 
   </div>
-  
+
   <table>
     <tr>
       <th>Position</th>
