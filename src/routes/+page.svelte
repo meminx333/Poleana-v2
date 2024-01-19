@@ -1,6 +1,6 @@
 <script>
   import Board from "./Board.svelte";
-  import { acLine, bcLine, ccLine, dcLine, pCell, qCell, sCell, tCell, afCell, sfCell, tfCell, qfCell, unNum, doNum, trNum,cuNum,cjNum,ciNum,seNum,siNum,ocNum,nuNum,diNum,onNum,dcNum,teNum,caNum,ceNum } from "./utils.js";
+  import { acLine, bcLine, ccLine, dcLine, pCell, qCell, sCell, tCell, afCell, sfCell, tfCell, qfCell, unNum, doNum, trNum,cuNum,cjNum,ciNum,seNum,siNum,ocNum,nuNum,diNum,onNum,dcNum,teNum,caNum,ceNum, uuFichas, udFichas, utFichas, ucFichas, duFichas, ddFichas, dtFichas, dcFichas, tuFichas, tdFichas, ttFichas, tcFichas, cuFichas, cdFichas, ctFichas, ccFichas } from "./utils.js";
   
   let squares = Array(256);
   $:colaLine = acLine(squares);
@@ -31,6 +31,23 @@
   $:etNum = teNum(squares);
   $:qNum = caNum(squares);
   $:crNum = ceNum(squares);
+  $:uuFi = uuFichas(squares);
+  $:udFi = udFichas(squares);
+  $:utFi = utFichas(squares);
+  $:ucFi = ucFichas(squares);
+  $:duFi = duFichas(squares);
+  $:ddFi = ddFichas(squares);
+  $:dtFi = dtFichas(squares);
+  $:dcFi = dcFichas(squares);
+  $:tuFi = tuFichas(squares);
+  $:tdFi = tdFichas(squares);
+  $:ttFi = ttFichas(squares);
+  $:tcFi = tcFichas(squares);
+  $:cuFi = cuFichas(squares);
+  $:cdFi = cdFichas(squares);
+  $:ctFi = ctFichas(squares);
+  $:ccFi = ccFichas(squares);
+
 
 </script>
 
@@ -69,7 +86,22 @@
     class:tePlaying={etNum?.includes(i)}
     class:caPlaying={qNum?.includes(i)}
     class:cePlaying={crNum?.includes(i)} 
-    
+    class:uuPlaying={uuFi?.includes(i)}
+    class:udPlaying={udFi?.includes(i)}
+    class:utPlaying={utFi?.includes(i)}
+    class:ucPlaying={ucFi?.includes(i)}
+    class:duPlaying={duFi?.includes(i)}
+    class:ddPlaying={ddFi?.includes(i)}
+    class:dtPlaying={dtFi?.includes(i)}
+    class:docPlaying={dcFi?.includes(i)}
+    class:tuPlaying={tuFi?.includes(i)}
+    class:tdPlaying={tdFi?.includes(i)}
+    class:ttPlaying={ttFi?.includes(i)}
+    class:tcPlaying={tcFi?.includes(i)}
+    class:cuPlaying={cuFi?.includes(i)}
+    class:cdPlaying={cdFi?.includes(i)}
+    class:ctPlaying={ctFi?.includes(i)}
+    class:ccPlaying={ccFi?.includes(i)}  
     >
    
     </button>    
@@ -218,7 +250,70 @@
   .cePlaying{
     padding: 10%;
   }
-
+  .uuPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha11.png");
+  size: cover;
+  }
+  .udPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha12.png");
+  size: cover;
+  }
+  .utPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha13.png");
+  size: cover;
+  }
+  .ucPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha14.png");
+  size: cover;
+  }
+  .duPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha21.png");
+  size: cover;
+  }
+  .ddPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha22.png");
+  size: cover;
+  }
+  .dtPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha23.png");
+  size: cover;
+  }
+  .docPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha24.png");
+  size: cover;
+  }
+  .tuPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha31.png");
+  size: cover;
+  }
+  .tdPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha32.png");
+  size: cover;
+  }
+  .ttPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha33.png");
+  size: cover;
+  }
+  .tcPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha34.png");
+  size: cover;
+  }
+  .cuPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha41.png");
+  size: cover;
+  }
+  .cdPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha42.png");
+  size: cover;
+  }
+  .ctPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha43.png");
+  size: cover;
+  }
+  .ccPlaying{
+  background-image: url("C:\Users\memo_\cana\src\routes\fichas\ficha44.png");
+  size: cover;
+  }
   .container:has(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) .square:not(.calPlaying, .cblPlaying .cclPlaying, .cdlPlaying) {
     color: #7535be;
 

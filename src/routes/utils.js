@@ -46,6 +46,22 @@ const docNums = [[12, 48, 207, 243]];
 const trcNums = [[11, 64, 191, 244]];
 const catNums = [[10, 80, 175, 245]];
 const cerNums = [[9, 96, 156, 246]];
+const ficha11 = [[25]];
+const ficha12 = [[24]];
+const ficha13 = [[23]];
+const ficha14 = [[22]];
+const ficha21 = [[97]];
+const ficha22 = [[113]];
+const ficha23 = [[129]];
+const ficha24 = [[145]];
+const ficha31 = [[230]];
+const ficha32 = [[231]];
+const ficha33 = [[232]];
+const ficha34 = [[233]];
+const ficha41 = [[158]];
+const ficha42 = [[142]];
+const ficha43 = [[126]];
+const ficha44 = [[110]];
 
 export function acLine(squares) {
   for (const aline of lineas) {
@@ -693,3 +709,196 @@ export function ceNum(squares) {
     return cerNum;
   }
 }
+
+export function uuFichas(squares) {
+  for (const fich11 of ficha11) {
+    const [a] = fich11;
+    if (
+      squares[25] === fich11[a]
+    ) {
+    }
+    console.log(fich11);
+    return fich11;
+  }
+}
+
+export function udFichas(squares) {
+  for (const fich12 of ficha12) {
+    const [a] = fich12;
+    if (
+      squares[24] === fich12[a]
+    ) {
+    }
+    console.log(fich12);
+    return fich12;
+  }
+}
+
+export function utFichas(squares) {
+  for (const fich13 of ficha13) {
+    const [a] = fich13;
+    if (
+      squares[23] === fich13[a]
+    ) {
+    }
+    console.log(fich13);
+    return fich13;
+  }
+}
+
+export function ucFichas(squares) {
+  for (const fich14 of ficha14) {
+    const [a] = fich14;
+    if (
+      squares[22] === fich14[a]
+    ) {
+    }
+    console.log(fich14);
+    return fich14;
+  }
+}
+
+export function duFichas(squares) {
+  for (const fich21 of ficha21) {
+    const [a] = fich21;
+    if (
+      squares[97] === fich21[a]
+    ) {
+    }
+    console.log(fich21);
+    return fich21;
+  }
+}
+
+export function ddFichas(squares) {
+  for (const fich22 of ficha22) {
+    const [a] = fich22;
+    if (
+      squares[113] === fich22[a]
+    ) {
+    }
+    console.log(fich22);
+    return fich22;
+  }
+}
+
+export function dtFichas(squares) {
+  for (const fich23 of ficha23) {
+    const [a] = fich23;
+    if (
+      squares[129] === fich23[a]
+    ) {
+    }
+    console.log(fich23);
+    return fich23;
+  }
+}
+
+export function dcFichas(squares) {
+  for (const fich24 of ficha24) {
+    const [a] = fich24;
+    if (
+      squares[145] === fich24[a]
+    ) {
+    }
+    console.log(fich24);
+    return fich24;
+  }
+}
+
+export function tuFichas(squares) {
+  for (const fich31 of ficha31) {
+    const [a] = fich31;
+    if (
+      squares[230] === fich31[a]
+    ) {
+    }
+    console.log(fich31);
+    return fich31;
+  }
+}
+
+export function tdFichas(squares) {
+  for (const fich32 of ficha32) {
+    const [a] = fich32;
+    if (
+      squares[231] === fich32[a]
+    ) {
+    }
+    console.log(fich32);
+    return fich32;
+  }
+}
+
+export function ttFichas(squares) {
+  for (const fich33 of ficha33) {
+    const [a] = fich33;
+    if (
+      squares[232] === fich33[a]
+    ) {
+    }
+    console.log(fich33);
+    return fich33;
+  }
+}
+
+export function tcFichas(squares) {
+  for (const fich34 of ficha34) {
+    const [a] = fich34;
+    if (
+      squares[233] === fich34[a]
+    ) {
+    }
+    console.log(fich34);
+    return fich34;
+  }
+}
+
+export function cuFichas(squares) {
+  for (const fich41 of ficha41) {
+    const [a] = fich41;
+    if (
+      squares[158] === fich41[a]
+    ) {
+    }
+    console.log(fich41);
+    return fich41;
+  }
+}
+
+export function cdFichas(squares) {
+  for (const fich42 of ficha42) {
+    const [a] = fich42;
+    if (
+      squares[142] === fich42[a]
+    ) {
+    }
+    console.log(fich42);
+    return fich42;
+  }
+}
+
+export function ctFichas(squares) {
+  for (const fich43 of ficha43) {
+    const [a] = fich43;
+    if (
+      squares[126] === fich43[a]
+    ) {
+    }
+    console.log(fich43);
+    return fich43;
+  }
+}
+
+export function ccFichas(squares) {
+  for (const fich44 of ficha44) {
+    const [a] = fich44;
+    if (
+      squares[110] === fich44[a]
+    ) {
+    }
+    console.log(fich44);
+    return fich44;
+  }
+}
+
