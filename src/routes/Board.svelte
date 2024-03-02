@@ -41,8 +41,8 @@
     display: grid;
     grid-template-columns: repeat(var(--size), 1fr);
     grid-template-rows: repeat(var(--size), 1fr);
-    height: 100%;
-    max-height: 200em;
+    height: 90%;
+    max-height: 100em;
     aspect-ratio: 1;
     background: rgb(191, 65, 65);
     gap: 1px;
@@ -51,8 +51,8 @@
     filter: drop-shadow(0.1em 00.1em 0.1em rgba(232, 209, 209, 0.3));
   }
   div {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
   }
   table {
     width: 100%;

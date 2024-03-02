@@ -101,7 +101,11 @@
     class:cuPlaying={cuFi?.includes(i)}
     class:cdPlaying={cdFi?.includes(i)}
     class:ctPlaying={ctFi?.includes(i)}
-    class:ccPlaying={ccFi?.includes(i)}  
+    class:ccPlaying={ccFi?.includes(i)}
+    on:click={ () => {
+    console.log(square)
+    }
+    }
     >
    
     </button>    
